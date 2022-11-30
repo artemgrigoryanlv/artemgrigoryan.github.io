@@ -1,3 +1,38 @@
+.preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 4;
+}
+
+.loader{
+    width: 100px;
+    height: 100px;
+    border: 10px solid #0f2959;
+    border-radius: 50%;
+    border-top-color: #db7f06;
+    animation: 1s spin infinite linear;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@keyframes spin {
+
+    from{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+
+    to{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+
+}
+
 body{
     font-family: Arial, sans-serif;
 }
@@ -7,12 +42,18 @@ nav{
     height: 60px;
     background: #344051
 }
+nav{
+    position: fixed;
+    z-index: 3
+}
+
 .logo{
     float: left;
     font-size: 28px;
     line-height: 60px;
     color: #fff;
-    padding-left: 388px;        
+    padding-left: 388px; 
+    animation: opacity 1.3s ease-in;
 }
 .menu{
     float: left;
@@ -26,6 +67,48 @@ nav{
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
+    opacity: 0;
+}
+.menu li:nth-child(1){
+    animation: opacity 1s ease-in forwards;
+    animation-delay: 0.32s;
+    
+}
+.menu li:nth-child(2){
+    animation: opacity 1s ease-in forwards;
+    animation-delay: 0.53s;
+    
+}
+.menu li:nth-child(3){
+    animation: opacity 1s ease-in forwards;
+    animation-delay: 0.74s;
+    
+}
+.menu li:nth-child(4){
+    animation: opacity 1s ease-in forwards;
+    animation-delay: 0.89s;
+    
+}
+.menu li:nth-child(5){
+    animation: opacity 1s ease-in forwards;
+    animation-delay: 1s;
+    
+}
+.menu li:nth-child(6){
+    animation: opacity 1s ease-in forwards;
+    animation-delay: 1.08s;
+    
+}
+
+
+.menu a:hover{
+    color: #da7d02;
+}
+.menu li:active{
+    transform: scale(1.1)
+}
+.menu li:visited{
+    color: white;
 }
 .menu a{
     color: white;
@@ -33,7 +116,7 @@ nav{
 .main{
     width: 100%;
     background:url(../img/Парень.png) 90% 100%/auto 85% no-repeat , url(../img/фон.jpg) center/cover no-repeat;
-    height: calc(100% - 60px);
+    height: 100%;
 }
 .title__container{
     float: left;
@@ -50,9 +133,9 @@ nav{
     font-size: 22px;
     color: #79818d;
 }
-.title__container input{
+.title__container .main_input1{
     height: 40px;
-    text-align: center;
+    width: 95px;
     border: 2px solid #6d7682;
     background: none;
     border-radius: 5px;
@@ -61,6 +144,44 @@ nav{
     padding: 0px 16px;
     margin: 50px 14px 0px 14px;
 }
+.title__container .main_input2{
+    height: 40px;
+    width: 126px;
+    border: 2px solid #6d7682;
+    background: none;
+    border-radius: 5px;
+    color: #6d7682;
+    font size: 13px;
+    padding: 0px 16px;
+    margin: 50px 14px 0px 14px;
+}
+
+.title__container .main_input2:hover{
+    transform: scale(1.06)
+/*background: -moz-linear-gradient(top,  rgba(255,255,255,0.27) 0%, rgba(255,255,255,0.4) 39%, rgba(216,122,0,0.6) 100%);
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0.27) 0%,rgba(255,255,255,0.4) 39%,rgba(216,122,0,0.6) 100%);
+background: linear-gradient(to bottom,  rgba(255,255,255,0.27) 0%,rgba(255,255,255,0.4) 39%,rgba(216,122,0,0.6) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45ffffff', endColorstr='#99d87a00',GradientType=0 );*/
+}
+
+.title__container .main_input1:hover{
+    transform: scale(1.06)
+/*background: -moz-linear-gradient(top,  rgba(255,255,255,0.27) 0%, rgba(255,255,255,0.4) 39%, rgba(216,122,0,0.6) 100%);
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0.27) 0%,rgba(255,255,255,0.4) 39%,rgba(216,122,0,0.6) 100%);
+background: linear-gradient(to bottom,  rgba(255,255,255,0.27) 0%,rgba(255,255,255,0.4) 39%,rgba(216,122,0,0.6) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45ffffff', endColorstr='#99d87a00',GradientType=0 );*/
+}
+
+@keyframes opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
 .about_me_container{
     height: 590px;
     margin: 0 auto;
@@ -120,6 +241,9 @@ nav{
     border: 2px solid #6f707e;
     padding-left: 21px;
     border-radius: 6px;
+}
+.about_me_container a:hover{
+    transform: scale(1.034)
 }
 
 .skills_container h2{
@@ -241,6 +365,9 @@ nav{
     border-radius: 6px;
     padding-left: 50px;
 }
+.cases a:hover{
+    background: #295b57;
+}
 
 .calc{
     height:860px;
@@ -313,7 +440,7 @@ nav{
 .statistics{
     height: 500px;
     width: 100%;
-    background: url(../img/bg2.jpg)
+    background: url(../img/bg2.jpg) center/cover fixed no-repeat;
 }
 
 .statistics_container h2{
@@ -508,6 +635,9 @@ height: 4px;
     border-radius: 5px;
     font-size: 16px;
 }
+.contacts input[type="submit"]:hover{
+    transform: scale(1.07)
+}
 
 .social_networks_img1{
     display: inline-block;
@@ -561,7 +691,6 @@ height: 4px;
     font-size: 15px;
     
 }
-
 
 
 
