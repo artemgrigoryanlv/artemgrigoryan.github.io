@@ -141,25 +141,27 @@ nav{
         color: white;
     }
 
+.about_me_container h2{
+    font-size: 33px;
+    margin: 110px 0 30px;
+    text-transform: uppercase;
+}
+ 
+.about_me_container hr{
+    height: 4px;
+    border: none;
+    background: #d17700;
+    width: 80px;
+    margin: 0px auto 60px;
+    opacity: 1;
+}
+  
+/*
 .about_me_container{
     height: 590px;
     margin: 0 auto;
     padding-bottom: 100px;
 }
-
-
-.about_me_container h2{
-    text-align: center;
-    width: 156px;
-    font-size: 33px;
-    margin: 110px auto 30px;
-    text-transform: uppercase;
-} 
-
-
-
-
-
 
 
 
