@@ -16,7 +16,9 @@ nav{
     color: #fff;
     animation: opacity 1.3s ease-in;
 }
-
+nav{
+    position: fixed;
+}
 
 .menu{
     float: left;
@@ -134,22 +136,25 @@ nav{
     
 }
 
+@media (max-width: 991px){
+    .title__container, .title__container h4, .title__container input{
+        color: white;
+    }
+
+.about_me_container{
+    height: 590px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.about_me_container h2{
+    text-align: center;
+    width: 156px;
+    font-size: 33px;
+    margin: 110px auto 30px;
+    text-transform: uppercase;
+} 
 
 
 
