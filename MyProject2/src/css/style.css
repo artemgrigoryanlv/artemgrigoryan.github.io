@@ -269,7 +269,7 @@ nav{
 
 
 .cases h2{
-    margin-top: 106px;
+    padding-top: 106px;
     text-transform: uppercase;
     color: #384354;
     text-align: center;
@@ -320,9 +320,6 @@ nav{
     font-size: 24px;
 }
 
-.cases2{
-
-}
 
 .carousel-item a{
    text-decoration: none; 
@@ -506,19 +503,18 @@ nav{
 
 .reviews{
     max-height:560px;
-    margin-top: 120px;
+    padding-top: 120px;
 }
 
 .reviews h2{
     text-align: center;
-    
     text-transform: uppercase;
     color: #243042;
     font-size: 31px;
 }
 
 .reviews hr{
-     height: 4px;
+    height: 4px;
     border: none;
     background: #d17700;
     width: 80px;
@@ -533,7 +529,6 @@ nav{
 
 .reviews p{
     display: block;
-    
     text-align: center;
     margin: 0 auto;
     font-size: 18px; 

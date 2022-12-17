@@ -1,6 +1,10 @@
 $(document).ready(function () {
     $(".preloader").css("display", "none");
 
+    new WOW().init();
+    
+    $("#telephone").mask("+7 (999) 999-9999");
+    
     function calculate() {
         let sum = parseInt($("#Select1 option:selected").val()) + parseInt($("#Select2 option:selected").val()) + parseInt($("#Select3 option:selected").val());
         let days = parseInt($("#Select1 option:selected").attr("days")) + parseInt($("#Select2 option:selected").attr("days")) + parseInt($("#Select3 option:selected").attr("days"));
